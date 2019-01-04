@@ -9,7 +9,7 @@ namespace Testris.Components
 {
     public class SimpleMover : Component, IUpdatable
     {
-        const float speed = 100f;
+        public float speed = 100f;
         public void update()
         {
             var moveDirection = Vector2.Zero;
