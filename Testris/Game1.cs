@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Graphics;
 using Nez;
+using Nez.Sprites;
 
 namespace Testris
 {
@@ -9,7 +10,7 @@ namespace Testris
     /// </summary>
     public class Game1 : Nez.Core
     {
-        public Game1()
+        public Game1() : base(width: 800, height: 600, windowTitle: "Testris", enableEntitySystems: false)
         {
         }
 
@@ -21,24 +22,21 @@ namespace Testris
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
+
+            Window.AllowUserResizing = true;
+
+            var myScene = Scene.createWithDefaultRenderer(Color.CornflowerBlue);
+            var texture = myScene.content.Load<Texture2D>("Textures/sample");
+
+            var entityOne = myScene.createEntity("entity-one");
+            entityOne.addComponent(new Sprite(texture));
+            var entityTwo = myScene.createEntity("entity-two");
+            entityTwo.addComponent(new Sprite(texture));
+            entityTwo.position = new Vector2(200, 200);
+
+            Core.scene = myScene;
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            // TODO: Add your update logic here
-
-            base.Update(gameTime);
-        }
     }
 }
