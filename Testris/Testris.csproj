@@ -43,6 +43,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Game1.cs" />
+    <Compile Include="GameObject\Tetromino\IPiece.cs" />
+    <Compile Include="GameObject\Tetromino\JPiece.cs" />
+    <Compile Include="GameObject\Tetromino\LPiece.cs" />
+    <Compile Include="GameObject\Tetromino\OPiece.cs" />
+    <Compile Include="GameObject\Tetromino\Piece.cs" />
+    <Compile Include="GameObject\Tetromino\SPiece.cs" />
+    <Compile Include="GameObject\Tetromino\TPiece.cs" />
+    <Compile Include="GameObject\Tetromino\ZPiece.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -109,9 +117,7 @@
     <None Include="app.manifest" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
