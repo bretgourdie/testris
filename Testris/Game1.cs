@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using Nez.Sprites;
-using Testris.Components;
+using Testris.GameObject.Tetromino;
 
 namespace Testris
 {
@@ -28,6 +28,24 @@ namespace Testris
             Window.AllowUserResizing = true;
 
             var myScene = Scene.createWithDefaultRenderer(Color.CornflowerBlue);
+
+            var ipiece = myScene.createEntity("lpiece");
+            ipiece.addComponent<IPiece>();
+
+            var jpiece = myScene.createEntity("jpiece");
+            jpiece.addComponent<JPiece>();
+
+            var lpiece = myScene.createEntity("lpiece");
+            lpiece.addComponent<LPiece>();
+
+            var opiece = myScene.createEntity("opiece");
+            opiece.addComponent<OPiece>();
+
+            var spiece = myScene.createEntity("spiece");
+            spiece.addComponent<SPiece>();
+
+            var tpiece = myScene.createEntity("tpiece");
+            tpiece.addComponent<TPiece>();
 
             Core.scene = myScene;
         }
