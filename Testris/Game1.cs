@@ -28,15 +28,6 @@ namespace Testris
             Window.AllowUserResizing = true;
 
             var myScene = Scene.createWithDefaultRenderer(Color.CornflowerBlue);
-            var texture = myScene.content.Load<Texture2D>("Textures/sample");
-
-            var entityOne = myScene.createEntity("entity-one");
-            entityOne.addComponent(new Sprite(texture));
-            entityOne.addComponent(new SimpleMover());
-            entityOne.addComponent(new DamageComponent());
-            var entityTwo = myScene.createEntity("entity-two");
-            entityTwo.addComponent(new Sprite(texture));
-            entityTwo.position = new Vector2(200, 200);
 
             Core.scene = myScene;
         }
