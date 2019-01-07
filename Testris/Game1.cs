@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
-using Testris.Scenes;
+using Testris.GameScene;
 
 namespace Testris
 {

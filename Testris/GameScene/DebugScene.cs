@@ -9,9 +9,9 @@ using Nez;
 using Nez.Sprites;
 using Testris.GameObject.Tetromino;
 
-namespace Testris.Scenes
+namespace Testris.GameScene
 {
-    public class DebugScene : Scene
+    public class DebugScene : Nez.Scene
     {
         public override void initialize()
         {
