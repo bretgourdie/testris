@@ -11,13 +11,39 @@ namespace Testris.GameObject.Tetromino
     {
         public override Color Color => Color.Cyan;
 
-        protected override int[,] getInitialArrangement() 
+        protected override List<int[,]> createClockwiseArrangements()
         {
-            return new int[,]
-                { {0, 0, 0, 0 },
-                  {1, 1, 1, 1 },
-                  {0, 0, 0, 0 },
-                  {0, 0, 0, 0 } };
+            return new List<int[,]>()
+            {
+                new int[,]
+                {
+                    { 0, 0, 0, 0 },
+                    { 1, 1, 1, 1 },
+                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0 }
+                },
+                new int[,]
+                {
+                    { 0, 0, 1, 0 },
+                    { 0, 0, 1, 0 },
+                    { 0, 0, 1, 0 },
+                    { 0, 0, 1, 0 }
+                },
+                new int[,]
+                {
+                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0 },
+                    { 1, 1, 1, 1 },
+                    { 0, 0, 0, 0 }
+                },
+                new int[,]
+                {
+                    { 0, 1, 0, 0 },
+                    { 0, 1, 0, 0 },
+                    { 0, 1, 0, 0 },
+                    { 0, 1, 0, 0 }
+                }
+            };
         }
     }
 }

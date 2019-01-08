@@ -11,12 +11,17 @@ namespace Testris.GameObject.Tetromino
     {
         public override Color Color => Color.Gold;
 
-        protected override int[,] getInitialArrangement()
+        protected override List<int[,]> createClockwiseArrangements()
         {
-            return new int[,]
-                { { 0, 1, 1, 0 },
-                  { 0, 1, 1, 0 },
-                  { 0, 0, 0, 0 } };
+            return new List<int[,]>()
+            {
+                new int[,]
+                {
+                    { 0, 1, 1, 0 },
+                    { 0, 1, 1, 0 },
+                    { 0, 0, 0, 0 }
+                }
+            };
         }
     }
 }
