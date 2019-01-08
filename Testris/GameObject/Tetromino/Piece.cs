@@ -39,7 +39,7 @@ namespace Testris.GameObject.Tetromino
                     indexIncrementor = -1;
                     break;
                 default:
-                    throw new NotImplementedException();
+                    throw new ArgumentException();
             }
 
             var uncorrectedDesiredIndex = currentArrangementIndex + 1 * indexIncrementor;
