@@ -11,5 +11,15 @@ namespace Testris.GameObject.Tetromino
     public abstract class Piece : Component
     {
         public abstract Color Color { get; }
+
+        public int[,] Arrangement { get; protected set; }
+
+        public Piece() : base()
+        {
+            Arrangement = getInitialArrangement();
+        }
+
+        protected abstract int[,] getInitialArrangement();
+
     }
 }

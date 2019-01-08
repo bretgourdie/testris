@@ -10,5 +10,13 @@ namespace Testris.GameObject.Tetromino
     public class ZPiece : Piece
     {
         public override Color Color => Color.Crimson;
+
+        protected override int[,] getInitialArrangement()
+        {
+            return new int[,]
+                { { 1, 1, 0 },
+                  { 0, 1, 1 },
+                  { 0, 0, 0 } };
+        }
     }
 }

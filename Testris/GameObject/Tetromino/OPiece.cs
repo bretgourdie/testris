@@ -10,5 +10,13 @@ namespace Testris.GameObject.Tetromino
     public class OPiece : Piece
     {
         public override Color Color => Color.Gold;
+
+        protected override int[,] getInitialArrangement()
+        {
+            return new int[,]
+                { { 0, 1, 1, 0 },
+                  { 0, 1, 1, 0 },
+                  { 0, 0, 0, 0 } };
+        }
     }
 }
