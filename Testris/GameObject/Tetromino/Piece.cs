@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Nez;
+using Nez.Sprites;
 using Testris.GameLogic;
 
 namespace Testris.GameObject.Tetromino
@@ -15,10 +16,17 @@ namespace Testris.GameObject.Tetromino
 
         public List<int[,]> ClockwiseArrangements { get; protected set; }
 
+        private Sprite _sprite { get; set; }
+
         public Piece() : base()
         {
             ClockwiseArrangements = createClockwiseArrangements();
             currentArrangementIndex = 0;
+        }
+
+        public virtual void onAddedToEntity()
+        {
+            _sprite = entity.getComponent<Sprite>();
         }
 
         public int[,] GetCurrentArrangement()
