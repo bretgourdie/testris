@@ -12,11 +12,11 @@ namespace Testris.GameObject.Tetromino
     {
         public abstract Color Color { get; }
 
-        public int[,] Arrangement { get; protected set; }
+        public int[,] CurrentArrangement { get; protected set; }
 
         public Piece() : base()
         {
-            Arrangement = getInitialArrangement();
+            CurrentArrangement = getInitialArrangement();
         }
 
         protected abstract int[,] getInitialArrangement();
