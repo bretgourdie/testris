@@ -42,7 +42,9 @@ namespace Testris.GameObject.Tetromino
                     throw new NotImplementedException();
             }
 
-            var desiredIndex = (currentArrangementIndex + 1 * indexIncrementor) % ClockwiseArrangements.Count;
+            var uncorrectedDesiredIndex = currentArrangementIndex + 1 * indexIncrementor;
+
+            var desiredIndex = uncorrectedDesiredIndex % ClockwiseArrangements.Count;
 
             var desiredArrangement = ClockwiseArrangements[desiredIndex];
 
