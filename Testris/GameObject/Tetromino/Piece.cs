@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Nez;
 using Nez.Sprites;
 using Testris.GameLogic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Testris.GameObject.Tetromino
 {
@@ -24,6 +25,7 @@ namespace Testris.GameObject.Tetromino
             currentArrangementIndex = 0;
         }
 
+        [SuppressMessage("Warning", "CS0114")]
         public virtual void onAddedToEntity()
         {
             _sprite = entity.getComponent<Sprite>();
