@@ -8,11 +8,13 @@ using Nez;
 using Nez.Sprites;
 using Testris.GameLogic;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Testris.GameObject.Tetromino
 {
     public abstract class Piece : Component
     {
+        public static Texture2D Texture { get; set; }
         public abstract Color Color { get; }
 
         public List<int[,]> ClockwiseArrangements { get; protected set; }
@@ -27,7 +29,7 @@ namespace Testris.GameObject.Tetromino
 
         public override void onAddedToEntity()
         {
-            _sprite = entity.addComponent<Sprite>();
+            _sprite = entity.addComponent(new Sprite(Piece.Texture));
         }
 
         public int[,] GetCurrentArrangement()
