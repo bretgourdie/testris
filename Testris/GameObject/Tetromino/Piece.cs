@@ -25,10 +25,9 @@ namespace Testris.GameObject.Tetromino
             currentArrangementIndex = 0;
         }
 
-        [SuppressMessage("Warning", "CS0114")]
-        public virtual void onAddedToEntity()
+        public override void onAddedToEntity()
         {
-            _sprite = entity.getComponent<Sprite>();
+            _sprite = entity.addComponent<Sprite>();
         }
 
         public int[,] GetCurrentArrangement()
