@@ -46,6 +46,7 @@
     <Compile Include="GameLogic\RotationDirection.cs" />
     <Compile Include="GameObject\Matrix.cs" />
     <Compile Include="GameObject\TetrominoGenerator.cs" />
+    <Compile Include="GameObject\Mino.cs" />
     <Compile Include="GameObject\Tetromino\IPiece.cs" />
     <Compile Include="GameObject\Tetromino\JPiece.cs" />
     <Compile Include="GameObject\Tetromino\LPiece.cs" />
