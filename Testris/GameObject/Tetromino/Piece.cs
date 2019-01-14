@@ -29,6 +29,7 @@ namespace Testris.GameObject.Tetromino
 
         public override void onAddedToEntity()
         {
+            base.onAddedToEntity();
             _sprite = entity.addComponent(new Sprite(Piece.Texture));
         }
 

@@ -12,8 +12,9 @@ namespace Testris.GameObject
     {
         private Sprite _sprite { get; set; }
 
-        public virtual void onAddedToEntity()
+        public override void onAddedToEntity()
         {
+            base.onAddedToEntity();
             _sprite = entity.getComponent<Sprite>();
         }
     }
